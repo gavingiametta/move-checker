@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static\css\index_style.css">
+        <title>Home page</title>
+    </head>
+    <body>
+        <header>
+            <h1>Pokémon Move-Checker</h1>
+            <p>Check if the enemy Pokémon has a move that is super effective against your Pokémon.</p>
+        </header>
+        <form action='/submit-search' method="post">
+            <p>
+                <label for="user_pokemon">Your Pokémon's Name</label><br>
+                <input type="text" id="user_pokemon" name="user_pokemon">
+            </p>
+            <p>
+                <label for="enemy_pokemon">Enemy Pokémon's Name</label><br>
+                <input type="text" id="enemy_pokemon" name="enemy_pokemon">
+            </p>
+            <p>
+                <input type="submit" value="SUBMIT">
+            </p>
+        </form>
+        <footer>
+        <p>Data from <a href="https://pokeapi.co/">PokeAPI</a></p>
+        </footer>
+    </body>
+</html>

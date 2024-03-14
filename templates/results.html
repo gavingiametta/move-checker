@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static\css\results_style.css">
+        <title>Results page</title>
+    </head>
+    <body>
+        <header>
+            <h1>Pokémon Move-Checker</h1>
+        </header>
+        {% if strong_moves|length == 0 %}
+                <div>
+                    <p>The enemy Pokémon has no super effective moves.</p>
+                </div>
+        {% else %}
+            {% if strong_moves|length == 1 %}
+                <h2>The enemy Pokémon has {{ strong_moves|length }} move that is super effective.</h2>
+            {% else %}
+                <h2>The enemy Pokémon has {{ strong_moves|length }} moves that are super effective.</h2>
+            {% endif %}
+            {%  for move in strong_moves %}
+                <div>
+                    <p>{{ move }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <footer>
+        <p>Data from <a href="https://pokeapi.co/">PokeAPI</a></p>
+        </footer>
+    </body>
+</html>
